@@ -79,8 +79,8 @@ RUN cd /opt && wget -q http://services.gradle.org/distributions/gradle-2.1-all.z
 RUN cd /opt && unzip -o gradle-2.1-all.zip
 RUN cd /opt && rm -f gradle-2.1-all.zip
 ## Set environment
-ENV GRADLE_HOME /opt/gradle-2.1/bin
-ENV PATH ${PATH}:${GRADLE_HOME}
+ENV GRADLE_HOME /opt/gradle-2.1
+ENV PATH ${PATH}:${GRADLE_HOME}/bin
 
 ## Set timezone(JP)
 RUN echo "Asia/Tokyo" > /etc/timezone
