@@ -62,16 +62,16 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 
 ## Android
 ## Install Android SDK
-RUN cd /opt && wget -q http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
-RUN cd /opt && tar xzf android-sdk_r23.0.2-linux.tgz
-RUN cd /opt && rm -f android-sdk_r23.0.2-linux.tgz
+RUN cd /opt && wget -q http://dl.google.com/android/android-sdk_r24.0.1-linux.tgz
+RUN cd /opt && tar xzf android-sdk_r24.0.1-linux.tgz
+RUN cd /opt && rm -f android-sdk_r24.0.1-linux.tgz
 ## Install AAPT dependencies
 RUN apt-get install -y lib32stdc++6 lib32z1
 ## Set environment
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 ## Update Android SDK
-RUN echo y | android update sdk --filter platform-tools,build-tools-21.1.1,android-19,extra-android-support --no-ui --force
+RUN echo y | android update sdk --filter platform-tools,build-tools-21.1.2,android-19,extra-android-support --no-ui --force
 
 ## Gradle
 ## Install Gradle
